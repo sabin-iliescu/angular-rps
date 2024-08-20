@@ -71,7 +71,7 @@ export class ScoreDisplayComponent implements OnChanges {
     localStorage.setItem('computerScore', '0');
     this.winner = '';
     this.resetValues.emit(true);
-}
+  }
     
 
   get savedPlayerScore(): number {
