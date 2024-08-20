@@ -1,0 +1,20 @@
+<div class="game-container">
+    <h1>Rock Paper Scissors</h1>
+    <div *ngIf="!result">
+      <button *ngFor="let choice of choices" (click)="play(choice)">
+        {{ choice }}
+      </button>
+    </div>
+    <div *ngIf="result">
+      <p>You chose: {{ playerChoice }}</p>
+      <p>Computer chose: {{ computerChoice }}</p>
+      <h2>{{ result }}</h2>
+      <button (click)="resetGame()">Play Again</button>
+    </div>
+    <app-score-display 
+        [playerChoice]="playerChoice" 
+        [computerChoice]="computerChoice" 
+        (resetValues)="handleResetValues($event)">
+    </app-score-display>
+  </div>
+  

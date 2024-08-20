@@ -1,0 +1,8 @@
+<div class="score-display">
+    <h3>Player Score: {{ savedPlayerScore }}</h3>
+    <h3>Computer Score: {{ savedComputerScore }}</h3>
+    <div *ngIf="winner">
+      <h2>{{ winner }} wins the game!</h2>
+      <button (click)="checkScores()">Reset Values</button>
+    </div>
+  </div>
